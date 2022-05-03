@@ -18,7 +18,7 @@ function compare<T>(x: T, y: T): number {
 }
 
 class FileInfo {
-    static parser = /^[-a-z_]*(\d+)(\w*)\.png$/i;
+    static parser = /^[-a-z0-9_]*?(\d+)([-a-z_]*)\.png$/i;
 
     static compare(a: FileInfo, b: FileInfo): number {
         let c = compare(a.ordinal, b.ordinal);
